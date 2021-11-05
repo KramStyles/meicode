@@ -12,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         TextView txtHello = findViewById(R.id.txtMsg);
         txtHello.setText("Hello and how are you?");
     }
 
     public void btnClick(View view){
-
+        TextView txtHello = findViewById(R.id.txtMsg);
+        txtHello.setText("I'm good. Thanks for clicking me");
     }
 }
