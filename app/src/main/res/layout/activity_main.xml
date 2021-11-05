@@ -20,11 +20,23 @@
         android:id="@+id/btnHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="btnClick"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMsg"
-        android:onClick="btnClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtText" />
+
+    <EditText
+        android:id="@+id/txtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter something!"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMsg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
