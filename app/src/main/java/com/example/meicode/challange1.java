@@ -24,8 +24,8 @@ public class challange1 extends AppCompatActivity {
         TextView lblMname = findViewById(R.id.lblMname);
         TextView lblSname = findViewById(R.id.lblSname);
 
-        lblFname.setText(txtFname.getText().toString().toUpperCase());
-        lblMname.setText(txtMname.getText().toString().toUpperCase());
-        lblSname.setText(txtSname.getText().toString().toUpperCase());
+        lblFname.setText("First name: " + txtFname.getText().toString().toUpperCase());
+        lblMname.setText("Middle name: " + txtMname.getText().toString().toUpperCase());
+        lblSname.setText("Surname: " + txtSname.getText().toString().toUpperCase());
     }
 }
