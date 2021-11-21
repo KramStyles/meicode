@@ -19,8 +19,10 @@ public class third_ui extends AppCompatActivity implements View.OnClickListener{
 
 //        Calling click method using the switch case
         Button btnDiffMthd = findViewById(R.id.thirdBtnDifferentClickMethod);
-        btnDiffMthd.setOnClickListener(this);
+        Button btnToast = findViewById(R.id.thirdBtnToast);
 
+        btnDiffMthd.setOnClickListener(this);
+        btnToast.setOnClickListener(this);
 
         btnHi.setOnClickListener(new View.OnClickListener() {
             @Override
