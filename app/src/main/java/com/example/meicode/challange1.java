@@ -2,6 +2,7 @@ package com.example.meicode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,5 +28,11 @@ public class challange1 extends AppCompatActivity {
         lblFname.setText("First name: " + txtFname.getText().toString().toUpperCase());
         lblMname.setText("Middle name: " + txtMname.getText().toString().toUpperCase());
         lblSname.setText("Surname: " + txtSname.getText().toString().toUpperCase());
+    }
+
+    public void goToUiBasics(View v){
+        Intent intent = new Intent(this, third_ui.class);
+        startActivity(intent);
+
     }
 }
