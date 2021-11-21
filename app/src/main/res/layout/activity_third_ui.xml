@@ -14,15 +14,21 @@
         android:textSize="20sp"
         android:textStyle="bold|italic"
         android:textColor="#666666"
-        android:id="@+id/thirdWelcome"
+        android:id="@+id/thirdTxtWelcome"
         />
     <!--        android:layout_centerHorizontal="true"-->
     <!--        android:layout_centerVertical="true"-->
 
     <Button
+        android:id="@+id/thirdBtnWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        />
+        android:layout_below="@id/thirdTxtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:textColor="@color/design_default_color_on_primary"
+        android:onClick="thirdSayHello"
+        android:text="Say Hello" />
 
 </RelativeLayout>
