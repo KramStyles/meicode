@@ -2,6 +2,7 @@ package com.example.meicode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +44,11 @@ public class third_ui extends AppCompatActivity implements View.OnClickListener{
                 break;
             case R.id.thirdBtnDifferentClickMethod:
                 txtWelcome.setText("Method from Another method Called!");
+                break;
+            case R.id.thirdBtnToast:
+                Intent intent = new Intent(this, UiBasics.class);
+                startActivity(intent);
+                break;
             default:
                 System.out.println("I don't know");
         }

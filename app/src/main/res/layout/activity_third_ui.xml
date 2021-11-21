@@ -52,4 +52,15 @@
         android:layout_marginTop="10dp"
         />
 
+    <Button
+        android:id="@+id/thirdBtnToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Toast"
+        android:layout_above="@+id/thirdTxtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+
+        />
+
 </RelativeLayout>
