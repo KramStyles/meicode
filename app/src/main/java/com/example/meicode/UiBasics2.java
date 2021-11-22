@@ -2,20 +2,23 @@ package com.example.meicode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
 
     private CheckBox chkHarry, chkMatrix, chkBlade;
     private RadioGroup radStatus;
     private ProgressBar progressBar, progressBar2;
+    private Button btnGoTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
         radStatus = findViewById(R.id.ui2RadStatus);
         progressBar = findViewById(R.id.ui2Progbar);
         progressBar2 = findViewById(R.id.ui2Progbar2);
+        btnGoTo = findViewById(R.id.ui2Goto);
 
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -46,6 +50,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
 
         chkMatrix.setOnCheckedChangeListener(this);
         chkBlade.setOnCheckedChangeListener(this);
+        btnGoTo.setOnClickListener(this);
         
         if (chkHarry.isChecked()) Toast.makeText(this, "Harry Porter is the default one here!", Toast.LENGTH_SHORT).show();
 
@@ -89,6 +94,18 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
             case R.id.ui2Blade:
                 if(isChecked) Toast.makeText(this, "Blade Trinity was dope", Toast.LENGTH_LONG).show();
                 else Toast.makeText(this, "You missed watching the Blade Trinity", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.ui2Goto:
+                Intent intent = new Intent(this, Layouts.class);
+                startActivity(intent);
+                break;
+            default:
                 break;
         }
     }
