@@ -3,6 +3,7 @@ package com.example.meicode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -14,7 +15,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
 
     private CheckBox chkHarry, chkMatrix, chkBlade;
     private RadioGroup radStatus;
-    private ProgressBar progressBar;
+    private ProgressBar progressBar, progressBar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,23 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
         chkBlade = findViewById(R.id.ui2Blade);
         radStatus = findViewById(R.id.ui2RadStatus);
         progressBar = findViewById(R.id.ui2Progbar);
+        progressBar2 = findViewById(R.id.ui2Progbar2);
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    progressBar2.incrementProgressBy(10);
+//                    try {
+//                        Thread.sleep(500);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+                    SystemClock.sleep(200);
+                }
+            }
+        });
+        thread.start();
 
         chkMatrix.setOnCheckedChangeListener(this);
         chkBlade.setOnCheckedChangeListener(this);
