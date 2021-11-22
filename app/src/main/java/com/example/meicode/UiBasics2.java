@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     private CheckBox chkHarry, chkMatrix, chkBlade;
+    private RadioGroup radStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
         chkHarry = findViewById(R.id.ui2Harry);
         chkMatrix = findViewById(R.id.ui2Matrix);
         chkBlade = findViewById(R.id.ui2Blade);
+        radStatus = findViewById(R.id.ui2RadStatus);
 
         chkMatrix.setOnCheckedChangeListener(this);
         chkBlade.setOnCheckedChangeListener(this);
@@ -29,6 +32,25 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked) Toast.makeText(UiBasics2.this, "You have watched Harry Porter", Toast.LENGTH_SHORT).show();
                 else Toast.makeText(UiBasics2.this, "You need to watch this movie", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        radStatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.ui2RadMarried:
+                        Toast.makeText(UiBasics2.this, "I guess you are married", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.ui2RadSingle:
+                        Toast.makeText(UiBasics2.this, "Let's just say you are still single", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.ui2RadRelationship:
+                        Toast.makeText(UiBasics2.this, "Nice. I hope it's not a complicated one", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+                }
             }
         });
     }

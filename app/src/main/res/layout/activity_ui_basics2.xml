@@ -42,6 +42,36 @@
             />
     </RelativeLayout>
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ui2Checkboxes"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/ui2RadStatus"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Married"
+            android:id="@+id/ui2RadMarried"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single"
+            android:id="@+id/ui2RadSingle"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In a Relationship"
+            android:id="@+id/ui2RadRelationship"/>
+
+    </RadioGroup>
+
 
 
 
