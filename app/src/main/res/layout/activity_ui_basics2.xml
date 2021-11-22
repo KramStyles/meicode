@@ -6,10 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".UiBasics2">
 
-    <CheckBox
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/ui2Checkboxes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
 
-        />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harry Porter"
+            android:id="@+id/ui2Harry"
+            android:checked="true"
+            android:layout_marginRight="10dp"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Matrix"
+            android:id="@+id/ui2Matrix"
+            android:layout_toRightOf="@+id/ui2Harry"
+            android:layout_marginRight="10dp"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blade Trinity"
+            android:id="@+id/ui2Blade"
+            android:layout_toRightOf="@+id/ui2Matrix"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+
+
 
 </RelativeLayout>
