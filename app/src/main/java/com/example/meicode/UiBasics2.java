@@ -3,8 +3,10 @@ package com.example.meicode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -12,6 +14,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
 
     private CheckBox chkHarry, chkMatrix, chkBlade;
     private RadioGroup radStatus;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
         chkMatrix = findViewById(R.id.ui2Matrix);
         chkBlade = findViewById(R.id.ui2Blade);
         radStatus = findViewById(R.id.ui2RadStatus);
+        progressBar = findViewById(R.id.ui2Progbar);
 
         chkMatrix.setOnCheckedChangeListener(this);
         chkBlade.setOnCheckedChangeListener(this);
@@ -44,11 +48,14 @@ public class UiBasics2 extends AppCompatActivity implements CompoundButton.OnChe
                         break;
                     case R.id.ui2RadSingle:
                         Toast.makeText(UiBasics2.this, "Let's just say you are still single", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.VISIBLE);
                         break;
                     case R.id.ui2RadRelationship:
                         Toast.makeText(UiBasics2.this, "Nice. I hope it's not a complicated one", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                         break;
                     default:
+                        progressBar.setVisibility(View.GONE);
                         break;
                 }
             }

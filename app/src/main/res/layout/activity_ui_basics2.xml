@@ -72,6 +72,14 @@
 
     </RadioGroup>
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/ui2Progbar"
+        android:visibility="gone"
+        />
+
 
 
 
