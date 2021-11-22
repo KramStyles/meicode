@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
         android:text="Show Toast"
         android:id="@+id/uiBtnToast"
         />
@@ -25,6 +26,15 @@
         android:hint="Enter Name"
         android:lines="2"
         android:inputType="textPersonName"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/uiBtnToast"
+        android:text="Go to Ui Two"
+        android:id="@+id/uiBtnGotoBasic2"
         />
 
 </RelativeLayout>
