@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
+        android:id="@+id/layRel"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -38,11 +39,38 @@
             />
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/layLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linear Text"
+            android:id="@+id/layLinTxt1"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Linear Button"
+            />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let's say Hello"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/layRel"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/layTxtHello"
         />
 
