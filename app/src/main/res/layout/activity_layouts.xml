@@ -12,6 +12,7 @@
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/layRel"
+        android:layout_below="@+id/layLin"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -53,6 +54,8 @@
             android:layout_height="wrap_content"
             android:text="Linear Text"
             android:id="@+id/layLinTxt1"
+            android:background="#eee"
+            android:layout_weight="3"
             />
 
         <Button
@@ -60,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Linear Button"
+            android:layout_weight="7"
             />
 
     </LinearLayout>
