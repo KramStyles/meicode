@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Meicode">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Constraits"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".UiBasics" />
         <activity android:name=".third_ui" />
         <activity android:name=".UiBasics2" />
