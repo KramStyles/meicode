@@ -26,6 +26,9 @@ public class Layouts extends AppCompatActivity implements View.OnClickListener {
             case R.id.layBtnHello:
                 Intent intent = new Intent(this, Constraits.class);
                 startActivity(intent);
+                break;
+            default:
+                break;
         }
     }
 }
