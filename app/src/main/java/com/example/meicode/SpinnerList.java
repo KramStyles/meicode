@@ -3,7 +3,11 @@ package com.example.meicode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -121,6 +125,17 @@ public class SpinnerList extends AppCompatActivity {
         cities.add("Middlefield");
         cities.add("Middlesex");
         cities.add("Middletown");
+
+//        Adapter required to pass in list of cities to list item with design
+        ArrayAdapter<String> citiesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
+        lstCities.setAdapter(citiesAdapter);
+
+        lstCities.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(SpinnerList.this, cities.get(position) + " Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
