@@ -25,6 +25,9 @@ public class Images extends AppCompatActivity implements View.OnClickListener{
             case R.id.btnSpinner:
                 Intent intent = new Intent(this, SpinnerList.class);
                 startActivity(intent);
+                break;
+            default:
+                break;
         }
     }
 }
