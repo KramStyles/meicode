@@ -6,17 +6,18 @@
         android:allowBackup="true"
         android:icon="@mipmap/development"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/development"
         android:supportsRtl="true"
         android:theme="@style/Theme.Meicode">
-        <activity android:name=".Images"></activity>
+        <activity android:name=".Layouts" />
+        <activity android:name=".Images" />
         <activity android:name=".Constraits" />
         <activity android:name=".MainActivity" />
         <activity android:name=".UiBasics" />
         <activity android:name=".third_ui" />
         <activity android:name=".UiBasics2" />
         <activity android:name=".challange1" />
-        <activity android:name=".Layouts">
+        <activity android:name=".SpinnerList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

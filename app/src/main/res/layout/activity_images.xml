@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     tools:context=".Images">
 
     <ImageView
@@ -19,8 +20,17 @@
         android:layout_height="150dp"
         android:src="@mipmap/development"
         android:id="@+id/pngDev"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Spinner"
+        android:id="@+id/btnSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
         />
 
 </RelativeLayout>
